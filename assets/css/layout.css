@@ -8,6 +8,9 @@ body {
         font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
+        padding-left: 0;
+        padding-right-left: 0;
+        padding-right: 0;
 }
 
 a {
@@ -30,6 +33,10 @@ a {
 footer a:hover {
         color: #43adff;
         text-shadow: #0090ff 0px 0px 2px;
+}
+
+footer {
+        margin-top: 20px;
 }
 
 pre, code {
@@ -71,6 +78,11 @@ blockquote {
 
 .outer {
         width: 100%;
+}
+
+header, section#main-content, footer {
+        padding-left: 10px;
+        padding-right: 10px;
 }
 
 #header-wrap {
@@ -151,4 +163,11 @@ blockquote {
 
 .download-descr {
         display: none;
+}
+
+@media screen and (min-width: 768px) {
+        header, section#main-content, footer {
+                padding-left: 0;
+                padding-right: 0;
+        }
 }

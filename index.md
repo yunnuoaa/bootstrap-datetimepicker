@@ -1,6 +1,6 @@
 ---
 title: Bootstrap Date/Time Picker
-layout: default
+layout: layout
 author: Thiago de Arruda
 authorUrl: https://github.com/tarruda
 projectName: bootstrap-datetimepicker

@@ -5,7 +5,7 @@ author: Thiago de Arruda
 authorUrl: https://github.com/tarruda
 projectName: bootstrap-datetimepicker
 projectDescription: Date/Time Picker for Twitter Boostrap 
-zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.4.zip
+zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.5.zip
 githubUrl: https://github.com/tarruda/bootstrap-datetimepicker
 css:
   - assets/css/bootstrap-datetimepicker.min.css
@@ -52,13 +52,7 @@ produce a widget similar to the one above:
     <script type="text/javascript">
       $('#datetimepicker').datetimepicker({
         format: 'MM/dd/yyyy hh:mm',
-        language: 'en',
-        pickDate: true,
-        pickTime: true,
-        hourStep: 1,
-        minuteStep: 15,
-        secondStep: 30,
-        inputMask: true
+        language: 'en'
       });
     </script>
   </body>

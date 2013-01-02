@@ -26,31 +26,43 @@ Default behavior in pt-BR, picks date/time with fast masked input typing
 automatically if missing) or via the
 popup widget, which supports year, month, day, hour and minute views:
 
+{% include demo1.html %}
+
+Code:
+
 {% highlight html %}
 {% include demo1.html %}
 {% endhighlight %}
-{% include demo1.html %}
 
 Similar to above example, but in US date/hour format:
 
+{% include demo2.html %}
+
+Code:
+
 {% highlight html %}
 {% include demo2.html %}
 {% endhighlight %}
-{% include demo2.html %}
 
 Disables date picker:
 
+{% include demo3.html %}
+
+Code:
+
 {% highlight html %}
 {% include demo3.html %}
 {% endhighlight %}
-{% include demo3.html %}
 
 Disables time picker:
 
+{% include demo4.html %}
+
+Code:
+
 {% highlight html %}
 {% include demo4.html %}
 {% endhighlight %}
-{% include demo4.html %}
 
 ### Complete example
 

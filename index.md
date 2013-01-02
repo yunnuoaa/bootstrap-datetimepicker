@@ -21,7 +21,7 @@ with contributions taken from [Andrew Rowls](https://github.com/eternicode) and
 
 ### Demo
 
-Default behavior in pt-BR, picks date/time with fast masked input typing
+####Default behavior in pt-BR, picks date/time with fast masked input typing
 (need only to type the numbers, the static part of the mask is inserted
 automatically if missing) or via the
 popup widget, which supports year, month, day, hour and minute views:
@@ -34,7 +34,7 @@ Code:
 {% include demo1.html %}
 {% endhighlight %}
 
-Similar to above example, but in US date/hour format:
+####Similar to above example, but in US date/hour format:
 
 {% include demo2.html %}
 
@@ -44,7 +44,7 @@ Code:
 {% include demo2.html %}
 {% endhighlight %}
 
-Disables date picker:
+####Disables date picker:
 
 {% include demo3.html %}
 
@@ -54,7 +54,7 @@ Code:
 {% include demo3.html %}
 {% endhighlight %}
 
-Disables time picker:
+####Disables time picker:
 
 {% include demo4.html %}
 

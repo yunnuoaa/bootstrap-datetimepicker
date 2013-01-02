@@ -11,6 +11,7 @@ css:
   - assets/css/bootstrap-datetimepicker.min.css
 js:
   - assets/js/bootstrap-datetimepicker.min.js
+  - assets/js/bootstrap-datetimepicker.pt-BR.js
   - assets/js/index.js
 ---
 ### Introduction
@@ -19,11 +20,42 @@ with contributions taken from [Andrew Rowls](https://github.com/eternicode) and
 [jdewit](https://github.com/jdewit).
 
 ### Demo
-{% include demo.html %}
 
-### Usage
+Default behavior in pt-BR, picks date/time with fast masked input typing
+(need only to type the numbers, the static part of the mask is inserted
+automatically if missing) or via the
+popup widget, which supports year, month, day, hour and minute views:
+
+{% highlight html %}
+{% include demo1.html %}
+{% endhighlight %}
+{% include demo1.html %}
+
+Similar to above example, but in US date/hour format:
+
+{% highlight html %}
+{% include demo2.html %}
+{% endhighlight %}
+{% include demo2.html %}
+
+Disables date picker:
+
+{% highlight html %}
+{% include demo3.html %}
+{% endhighlight %}
+{% include demo3.html %}
+
+Disables time picker:
+
+{% highlight html %}
+{% include demo4.html %}
+{% endhighlight %}
+{% include demo4.html %}
+
+### Complete example
+
 Copy and paste the following code in a file(eg: test.html) and it should
-produce a widget similar to the one above:
+produce a widget similar to the first demo:
 
 {% highlight html %}
 <!DOCTYPE HTML>
@@ -49,10 +81,13 @@ produce a widget similar to the one above:
     <script type="text/javascript"
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
     </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
     <script type="text/javascript">
       $('#datetimepicker').datetimepicker({
-        format: 'MM/dd/yyyy hh:mm',
-        language: 'en'
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'pt-BR'
       });
     </script>
   </body>

@@ -5,7 +5,7 @@ author: Thiago de Arruda
 authorUrl: https://github.com/tarruda
 projectName: bootstrap-datetimepicker
 projectDescription: Date/Time Picker for Twitter Boostrap 
-zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.5.zip
+zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.7.zip
 githubUrl: https://github.com/tarruda/bootstrap-datetimepicker
 css:
   - assets/css/bootstrap-datetimepicker.min.css
@@ -64,7 +64,45 @@ Code:
 {% include demo4.html %}
 {% endhighlight %}
 
-### Complete example
+### API
+
+The widget class provides 4 methods to manipulate dates:
+'getDate'/'setDate' for working with UTC and 'getLocalDate'/'setLocalDate' for
+working with local dates:
+
+{% highlight js %}
+// Considering you are on a GMT-3 timezone and the input contains '2000-01-17 10:00'
+var localDate = picker.getLocalDate(); // localDate === 2000-01-17 07:00
+var utcDate = picker.getDate(); // utcDate === 2000-01-17 10:00
+//
+picker.setLocalDate(new Date(1998, 10, 11, 4, 30)); // input === 1998-10-11 07:30
+picker.setDate(new Date(Date.UTC(1998, 10, 11, 4, 30))); // input === 1998-10-11 04:30
+{% endhighlight %}
+
+The date value can be unset by passing 'null' to any of the 'set' methods or by
+erasing the input:
+
+{% highlight js %}
+var picker = el.data('datetimepicker');
+picker.setLocalDate(null); // input === 1998-10-11 07:30
+// or
+picker.setDate(null); // input === 1998-10-11 04:30
+// or
+input.val('');
+input.change();
+{% endhighlight %}
+
+The only event exposed is 'changeDate', which will expose 'date' and
+'localDate' properties on the event object:
+
+{% highlight js %}
+el.on('changeDate', function(e) {
+  console.log(e.date.toString());
+  console.log(e.localDate.toString());
+});
+{% endhighlight %}
+
+### Complete sample markup
 
 Copy and paste the following code in a file(eg: test.html) and it should
 produce a widget similar to the first demo:
@@ -106,9 +144,15 @@ produce a widget similar to the first demo:
 <html>
 {% endhighlight %}
 
-The element also has the bootstrap-datepicker 'changeDate' event and 'setValue' method.
+### Development
 
-### Compilation
+If you want to contribute, please follow the settings in the .lvimrc file (2
+space indentation). 
+
+To report bugs, ideally an automated test that reproduces the bug should be created in
+ the 'test/issues.coffee' file(following the conventions of the tests already
+defined there) and submitted with a pull request.
+
 To compile/minify you need to have make, node.js and npm on your $PATH
 
 {% highlight sh %}
@@ -117,3 +161,12 @@ $ cd bootstrap-datetimepicker
 $ make deps
 $ make build
 {% endhighlight %}
+
+To run the automated tests just type:
+
+{% highlight sh %}
+$ make test
+{% endhighlight %}
+
+It should download all dependencies needed for testing(phantomjs, jquery...)
+

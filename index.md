@@ -84,9 +84,9 @@ erasing the input:
 
 {% highlight js %}
 var picker = el.data('datetimepicker');
-picker.setLocalDate(null); // input === 1998-10-11 07:30
+picker.setLocalDate(null);
 // or
-picker.setDate(null); // input === 1998-10-11 04:30
+picker.setDate(null);
 // or
 input.val('');
 input.change();

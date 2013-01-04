@@ -23,8 +23,8 @@ with contributions taken from [Andrew Rowls](https://github.com/eternicode) and
 
 ####Default behavior in pt-BR, picks date/time with fast masked input typing
 (need only to type the numbers, the static part of the mask is inserted
-automatically if missing) or via the
-popup widget, which supports year, month, day, hour and minute views:
+automatically if missing) or via the popup widget, which supports year, month, day,
+hour and minute views:####
 
 {% include demo1.html %}
 

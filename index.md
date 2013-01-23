@@ -5,7 +5,7 @@ author: Thiago de Arruda
 authorUrl: https://github.com/tarruda
 projectName: bootstrap-datetimepicker
 projectDescription: Date/Time Picker for Twitter Boostrap 
-zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.7.zip
+zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.8.zip
 githubUrl: https://github.com/tarruda/bootstrap-datetimepicker
 css:
   - assets/css/bootstrap-datetimepicker.min.css

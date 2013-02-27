@@ -5,7 +5,7 @@ author: Thiago de Arruda
 authorUrl: https://github.com/tarruda
 projectName: bootstrap-datetimepicker
 projectDescription: Date/Time Picker for Twitter Boostrap 
-zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.8.zip
+zipDownloadUrl: assets/dist/bootstrap-datetimepicker-0.0.9.zip
 githubUrl: https://github.com/tarruda/bootstrap-datetimepicker
 css:
   - assets/css/bootstrap-datetimepicker.min.css
@@ -98,6 +98,24 @@ el.on('changeDate', function(e) {
   console.log(e.localDate.toString());
 });
 {% endhighlight %}
+
+### Options
+
+These are the default options for initializing the widget:
+
+{% highlight js %}
+$.fn.datetimepicker.defaults = {
+  maskInput: true,           // disables the text input mask
+  pickDate: true,            // disables the date picker
+  pickTime: true,            // disables de time picker
+  pick12HourFormat: false,   // enables the 12-hour format time picker
+  pickSeconds: true,         // disables seconds in the time picker
+  startDate: -Infinity,      // set a minimum date
+  endDate: Infinity          // set a maximum date
+};
+{% endhighlight %}
+
+Examples of using these options can be seen in the file test/specs.coffee.
 
 ### Complete sample markup
 

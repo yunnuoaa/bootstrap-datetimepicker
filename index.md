@@ -80,7 +80,7 @@ The date value can be unset by passing 'null' to any of the 'set' methods or by
 erasing the input:
 
 {% highlight js %}
-var picker = el.data('datetimepicker');
+var picker = $('#datetimepicker'l).data('datetimepicker');
 picker.setLocalDate(null);
 // or
 picker.setDate(null);

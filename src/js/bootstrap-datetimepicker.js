@@ -849,7 +849,7 @@
         } else if (property === 'Period12') {
           if (d.getUTCHours() >= 12) return 'PM';
           else return 'AM';
-		} else if (property === 'UTCYear') {
+	} else if (property === 'UTCYear') {
           rv = d.getUTCFullYear();
           rv = rv.toString().substr(2);   
         } else {
@@ -857,7 +857,6 @@
           rv = d[methodName]();
         }
         if (methodName === 'getUTCMonth') rv = rv + 1;
-        if (methodName === 'getUTCYear') rv = rv + 1900 - 2000;
         return padLeft(rv.toString(), len, '0');
       });
     },
